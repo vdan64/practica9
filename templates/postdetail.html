@@ -6,4 +6,5 @@
     <p>{{ post.author }}</p>
     <p>{{ post.body }}</p>
     <button><a href="{% url 'post_delete' post.pk %}">Delete</a></button>
+    <button><a href="{% url 'update_post' post.pk %}">Edit</a></button>
 {% endblock content %}
