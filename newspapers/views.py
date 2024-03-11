@@ -3,8 +3,10 @@ from django.views.generic import DetailView, ListView
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Post
-
 # Create your views here.   ``
+class Home(ListView):
+    model = Post
+    template_name = "home.html"
 class NewsDetailView(DetailView):
     model = Post
     template_name = "postdetail.html"
@@ -15,4 +17,4 @@ class Updatepost (UpdateView):
 class DeletePost(DeleteView):
     model = Post
     template_name = "postdelete.html"
-    fsuccess_url = reverse_lazy("home")
+    success_url = reverse_lazy("home")
