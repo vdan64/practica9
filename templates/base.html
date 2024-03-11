@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title><h1>Base</h1></title>
 </head>
 
 <body>
-    <section>
+    <header>
         <div>
-            <a href="{% url 'post_create' %}">Create post</a>
-        </div> 
-
+            <h1>
+                <a >Django Blog</a>
+            </h1>
+        </div>
+    </header>
+    <section>
         {% block content %}
             <!--Blah blah blah -->
         {% endblock content %}
