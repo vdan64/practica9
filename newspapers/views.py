@@ -3,6 +3,9 @@ from django.views.generic import DetailView, ListView
 from django.views.generic.edit import UpdateView
 from .models import Post
 # Create your views here.   ``
+class Home(ListView):
+    model = Post
+    template_name = "home.html"
 class NewsDetailView(DetailView):
     model = Post
     template_name = "postdetail.html"
