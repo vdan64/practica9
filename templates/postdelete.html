@@ -1,0 +1,10 @@
+
+
+{% block content %}
+    <h1>Delete post</h1>
+    <p>Estas seguro de querer eliminar {{ post.title }}?</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <button type="submit" value="Confirm">Confirmar</button>
+    </form>
+{% endblock content %}
